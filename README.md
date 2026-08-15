@@ -23,7 +23,7 @@ RAG(Retrieval-Augmented Generation) 기반 AI 에이전트 프로토타입입니
 ## 시스템 아키텍쳐
 
 <p align="center">
-  <img src="./architecture_w2.png" width="750">
+  <img src="./architecture_w2.png" width="700">
 </p>
 
 업로드된 PDF 문서는 텍스트 추출 및 청킹 후 임베딩되어 Vector DB에 저장됩니다.  
