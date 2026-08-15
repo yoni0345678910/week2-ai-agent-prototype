@@ -2,7 +2,7 @@
 
 > RAG 기반 월드비전 관련 문서 질의응답 AI 에이전트 프로토타입
 
-## 📌 프로젝트 개요
+## 프로젝트 개요
 
 본 프로젝트는 월드비전 관련 문서를 기반으로 사용자의 질문에 답변하는
 RAG(Retrieval-Augmented Generation) 기반 AI 에이전트 프로토타입입니다.
@@ -19,6 +19,50 @@ RAG(Retrieval-Augmented Generation) 기반 AI 에이전트 프로토타입입니
 - LLM API 연동 및 답변 생성
 - 프롬프트 엔지니어링 기법 적용 및 비교
 - 문서 내·외 질의를 활용한 응답 정확성 및 환각 억제 평가
+
+## 실행 환경 및 실행 방법
+
+### 실행 환경
+
+본 프로젝트는 로컬 환경에서 Python 기반으로 실행되며,
+OpenAI API를 활용하여 임베딩 및 답변 생성을 수행합니다.
+
+- Python 3.x
+- Local Environment
+- Streamlit
+- LangChain
+- OpenAI API
+- FAISS
+
+### 필요한 라이브러리 설치
+
+프로젝트 실행에 필요한 라이브러리는 다음 명령어를 통해 설치할 수 있습니다.
+
+```bash
+pip install streamlit python-dotenv langchain langchain-community langchain-openai langchain-text-splitters faiss-cpu pymupdf
+```
+
+### OpenAI API Key 설정
+
+OpenAI API 사용을 위해 프로젝트 루트 디렉터리에 `.env` 파일을 생성하고
+다음과 같이 API Key를 설정합니다.
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+```
+
+> `.env` 파일에는 API Key가 포함되므로 GitHub Repository에 업로드하지 않습니다.
+
+### 실행 방법
+
+프로젝트 파일을 로컬 환경에 다운로드한 후 터미널에서 다음 명령어를 실행합니다.
+
+```bash
+streamlit run app.py
+```
+
+Streamlit Web UI가 실행되면 사이드바에서 PDF 문서를 업로드하고,
+질문을 입력하여 문서 기반 RAG 질의응답을 사용할 수 있습니다.
 
 ## 시스템 아키텍쳐
 
@@ -44,7 +88,7 @@ API Key는 `.env` 환경변수로 관리하며, 생성된 답변은 Streamlit We
 | LLM | GPT-4o | 검색 문맥 기반 답변 생성 |
 | Environment | python-dotenv | API Key 환경변수 관리 |
 
-## ⚙️ RAG 파라미터 설정 및 실험
+## RAG 파라미터 설정 및 실험
 
 RAG 검색 성능을 비교하기 위해 Chunk Size, Chunk Overlap 및 검색 문서 수(k)를 조정하여 테스트를 진행했습니다.
 
@@ -54,7 +98,7 @@ RAG 검색 성능을 비교하기 위해 Chunk Size, Chunk Overlap 및 검색 �
 | 2차 | Chunk Overlap | 100 → 200 |
 | 3차 | Retriever k | 테스트 후 최종값 4 |
 
-## 📊 RAG 성능 평가
+## RAG 성능 평가
 
 > **평가 문서 안내**
 >
