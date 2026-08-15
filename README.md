@@ -27,7 +27,7 @@ RAG(Retrieval-Augmented Generation) 기반 AI 에이전트 프로토타입입니
 본 프로젝트는 로컬 환경에서 Python 기반으로 실행되며,
 OpenAI API를 활용하여 임베딩 및 답변 생성을 수행합니다.
 
-- Python 3.x
+- Python 3.14.3
 - Local Environment
 - Streamlit
 - LangChain
