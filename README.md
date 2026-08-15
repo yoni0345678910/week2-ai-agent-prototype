@@ -43,3 +43,19 @@ API Key는 `.env` 환경변수로 관리하며, 생성된 답변은 Streamlit We
 | Vector DB | FAISS | 벡터 저장 및 유사도 검색 |
 | LLM | GPT-4o | 검색 문맥 기반 답변 생성 |
 | Environment | python-dotenv | API Key 환경변수 관리 |
+
+## ⚙️ RAG 파라미터 설정 및 실험
+
+RAG 검색 성능을 비교하기 위해 Chunk Size, Chunk Overlap 및 검색 문서 수(k)를 조정하여 테스트를 진행했습니다.
+
+| 구분 | 조정 항목 | 설정값 |
+|---|---|---|
+| 1차 | Chunk Size | 400 → 800 → 1000 |
+| 2차 | Chunk Overlap | 100 → 200 |
+| 3차 | Retriever k | 테스트 후 최종값 4 |
+
+### 최종 설정
+
+- Chunk Size: `1000`
+- Chunk Overlap: `200`
+- Retriever k: `4`
