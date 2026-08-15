@@ -22,7 +22,9 @@ RAG(Retrieval-Augmented Generation) 기반 AI 에이전트 프로토타입입니
 
 ## 시스템 아키텍쳐
 
-![WorldVision AI Assistant 시스템 아키텍처](./architecture_w2.png)
+<p align="center">
+  <img src="./architecture_w2.png" width="750">
+</p>
 
 업로드된 PDF 문서는 텍스트 추출 및 청킹 후 임베딩되어 Vector DB에 저장됩니다.  
 사용자 질문은 유사도 검색을 통해 관련 문서 Chunk를 검색하고, 검색된 문맥과 함께 프롬프트를 구성하여 LLM에 전달됩니다.  
